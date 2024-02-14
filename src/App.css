@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Sidebar.css */
+.sidebar {
+  width: 200px;
+  background-color: pink;
+  max-height: 1000vh;
   min-height: 100vh;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: black;
+}
+
+.sidebar a:hover {
+  color: black;
+}
+
+.sidebar a.active {
+  font-weight: bold;
+}
+
+/* Customize hover arrow */
+.sidebar a::after {
+  content: " →";
+  visibility: hidden;
+  transition: visibility 0.3s ease;
+}
+
+.sidebar a:hover::after {
+  visibility: visible;
+}
+/*conatiner**/
+.container {
+  width: calc(100vw - 200px);
+  height: 100vh;
+}
+.Searchbar {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+}
+.Searchbar img:hover {
+  cursor: pointer;
+}
+/** Table CSS*/
+.table_container {
+  margin: 20px;
+  width: 82vw;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 7px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+/**pagination*/
+.pagination {
+  list-style-type: none;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 20px;
+  margin-left: 60vw;
 }
 
-.App-link {
-  color: #61dafb;
+.pagination li {
+  margin: 0 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pagination button {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: #333;
+  color: #fff;
 }
